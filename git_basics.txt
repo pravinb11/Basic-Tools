@@ -1,0 +1,7 @@
+This is a git basics command.
+
+// Configuring git for the first time
+
+// Using github 
+
+// Using local machine for gitrepo
