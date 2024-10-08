@@ -1,0 +1,17 @@
+Once you have done permanent delete, i.e., rm -rf command then the following recovery procedure can be used for recovery
+The following command works best for cpp files. You can run this command on the same machine where the files got deleted.
+
+// First install the foremost software
+sudo apt install foremost
+
+// Run this command to recoved permanently deleted files
+sudo foremost -v -t cpp -i /dev/nvme0n1p5 -o /home/ubuntu/Downloads/recover -T
+
+/dev/nvme0n1p5 --> this is the input file, the location where the files got deleted
+/home/ubuntu/Downloads/recover --> this the location where you want to save the recovered files
+
+// The recovered files will require permission
+sudo chmod -R 777 /home/hitech/Downloads/recover3_Sat_Oct__5_19_53_33_2024/
+
+// Search for keywords in the recovered files
+grep -r --include="*.cpp" "example" /home/ubuntu/Downloads/recover_Sat_Oct__5_14_09_11_2024/
